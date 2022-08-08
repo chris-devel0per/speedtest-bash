@@ -15,14 +15,13 @@ echo "$number_download"
 
 if [ $number_download  -gt 80 ]
 then
-        echo Hey that\'s a large number.
-        pwd
+       echo "--------------------------------------" >> high.txt
+        echo "$variable" | grep Download >> high.txt
+        echo "$variable" | grep Upload >> high.txt
+        echo $(date) >> high.txt
+else
+        echo "---------------------------------------" >> log.txt
+        echo "$variable" | grep Download >> log.txt
+        echo "$variable" | grep Upload  >> log.txt
+        echo $(date) >> log.txt
 fi
-
-echo "---------------------------------------" >> log.txt
-echo "$variable" | grep Download >> log.txt
-echo "$variable" | grep Upload  >> log.txt
-echo $(date) >> log.txt
-
-
-
